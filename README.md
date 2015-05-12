@@ -21,6 +21,8 @@ And then execute:
 
 ## Usage
 
+In your `Capfile`:
+
 ```ruby
 require 'capistrano/rollbar/sourcemaps'
 ```

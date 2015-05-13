@@ -30,7 +30,7 @@ namespace :rollbar do
       url_base = fetch(:rollbar_sourcemaps_minified_url_base).dup
       url_base = url_base.prepend('http://') unless url_base.index(/https?:\/\//)
 
-      url = URI.join(url_base, s_map.gsub(gsub_pattern, ''))
+      url = File.join(url_base, s_map.gsub(gsub_pattern, ''))
       debug "Minified url for #{s_map}: #{url}"
       url
     end
